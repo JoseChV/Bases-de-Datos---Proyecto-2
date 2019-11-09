@@ -32,8 +32,8 @@ public class SQLServerConnection {
 		CallableStatement cstmt = conn.prepareCall("{call getItemRelation}");
 
 		cstmt.execute();
-		
+
 		return cstmt.getResultSet();
-		
+
 	}
 }

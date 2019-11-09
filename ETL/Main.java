@@ -6,8 +6,7 @@ public class Main {
 		ETL etl = new ETL();
 		etl.extractAndTransform();
 		etl.load();
-		
-		
+
 	}
 
 }

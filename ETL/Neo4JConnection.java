@@ -34,8 +34,7 @@ public class Neo4JConnection implements AutoCloseable {
 
 		try (Transaction tx = session.beginTransaction()) {
 			tx.run("MERGE (a:Item {id:" + idItem1 + " })" + "MERGE (b:Item {id:" + idItem2 + " })"
-					+ "MERGE (a) - [:BoughtWith] -> (b)"
-					+ "MERGE (b) - [:BoughtWith] -> (a)");
+					+ "MERGE (a) - [:BoughtWith] -> (b)" + "MERGE (b) - [:BoughtWith] -> (a)");
 
 			tx.success();
 		}
